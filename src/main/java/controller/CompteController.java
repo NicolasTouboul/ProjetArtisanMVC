@@ -40,7 +40,7 @@ public class CompteController {
 	private String goEdit(Compte c, Model model) {
 
 		model.addAttribute("compte", c);
-		// model.addAttribute("salles", demandeRepository.findAll());
+		// model.addAttribute("demandes", demandeRepository.findAll());
 		return "compte/compteEdit";
 	}
 
