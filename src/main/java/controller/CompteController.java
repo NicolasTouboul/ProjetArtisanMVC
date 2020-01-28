@@ -28,7 +28,7 @@ public class CompteController {
 
 //METHODE FINDALL	
 	
-	@GetMapping
+	@GetMapping("/compteList")
 	public String list(Model model) {
 		model.addAttribute("compte", compteRepository.findAll());
 		return "compte/compteList";
