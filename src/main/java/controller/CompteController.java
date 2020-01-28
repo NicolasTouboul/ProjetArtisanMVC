@@ -78,7 +78,7 @@ public class CompteController {
 //			compte.setDemande(null);
 //		}
 		compteRepository.save(compte);
-		return "redirect:/personne/list";
+		return "redirect:/compte/compteList";
 	}
 
 	@PostMapping("/saveArtisan")
@@ -96,6 +96,6 @@ public class CompteController {
 	@GetMapping("/delete")
 	public String delete(@RequestParam(name = "id") long id) {
 		compteRepository.deleteById(id);
-		return "redirect:/personne/list";
+		return "redirect:/compte/compteList";
 	}
 }
