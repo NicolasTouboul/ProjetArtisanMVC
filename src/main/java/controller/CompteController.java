@@ -45,7 +45,7 @@ public class CompteController {
 	}
 
 	@GetMapping("/compteEdit")
-	public String edit(@RequestParam(name = "id") long id, Model model) {
+	public String edit(@RequestParam(name = "idCompte") long id, Model model) {
 		Optional<Compte> opt = compteRepository.findById(id);
 		Compte c = null;
 		if (opt.isPresent()) {
@@ -81,12 +81,12 @@ public class CompteController {
 		return "redirect:/compte/compteList";
 	}
 
-	@PostMapping("/saveArtisan")
+	@GetMapping("/saveArtisan")
 	public String saveArtisan(@ModelAttribute("compte") @Valid Artisan compte, BindingResult br, Model model) {
 		return save(compte, br, model);
 	}
 
-	@PostMapping("/saveClient")
+	@GetMapping("/saveClient")
 	public String saveClient(@ModelAttribute("compte") @Valid Client compte, BindingResult br, Model model) {
 		return save(compte, br, model);
 	}
@@ -94,7 +94,7 @@ public class CompteController {
 //METHODE EDIT
 
 	@GetMapping("/delete")
-	public String delete(@RequestParam(name = "id") long id) {
+	public String delete(@RequestParam(name = "idCompte") long id) {
 		compteRepository.deleteById(id);
 		return "redirect:/compte/compteList";
 	}
