@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.Metier;
 import repository.MetierRepository;
+import repository.ServiceRepository;
 
 
 
@@ -22,6 +23,9 @@ public class MetierController {
 	
 	@Autowired
 	MetierRepository metierRepository;
+	
+	@Autowired
+	ServiceRepository serviceRepository;
 	
 	@GetMapping("/listmetier")
 	public ModelAndView list() {
@@ -36,8 +40,8 @@ public class MetierController {
 	}
 	
 	@GetMapping("/addmetier")
-	public ModelAndView addMetier() {
-		return new ModelAndView("metier/addMetier", "metier", new Metier());
+	public ModelAndView addmetier() {
+		return new ModelAndView("metier/addmetier", "metier", new Metier());
 		
 	}
 	@PostMapping("/savemetier")

@@ -21,13 +21,15 @@
 		<a href="${ctx}/metier/addmetier" class="btn btn-link">ajout d'un metier</a>
 		<table class="table">
 			<tr>
+				<th>id</th>
 				<th>metier</th>
 				<th></th>
 			</tr>
 			<c:forEach items="${metiers}" var="m">
 				<tr>
+					<td>${m.idMetier}</td>
 					<td>${m.titreMetier}</td>
-					<td><a href="${ctx}/metier/delete?nom=${m.titreMetier}"
+					<td><a href="${ctx}/metier/delete?idMetier=${m.idMetier}"
 						class="btn btn-warning">supprimer</a></td>
 				</tr>
 			</c:forEach>
