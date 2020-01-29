@@ -34,33 +34,43 @@
 			<div class="form-group">
 				<form:label path="login">login:</form:label>
 				<form:input path="login" cssClass="form-control"/>
-				<form:errors path="login"></form:errors>
+				<form:errors path="login" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
 				<form:label path="mdp">mdp:</form:label>
-				<form:input path="mdp" cssClass="form-control"/>
-				<form:errors path="mdp"></form:errors>
+				<form:input type="password" placeholder="**********" path="mdp" cssClass="form-control"/>
+				<form:errors path="mdp" cssClass="alert alert-danger" element="div"></form:errors>
+			</div>
+			
+			<div class="form-group">
+				<form:label path="email">email:</form:label>
+				<form:input type="email" placeholder="johndoe@gmail.com" path="email" cssClass="form-control"/>
+				<form:errors path="email" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
 				<form:label path="adresse.numero">numero:</form:label>
 				<form:input type="number" path="adresse.numero" cssClass="form-control"/>
+				<form:errors path="adresse.numero" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
 				<form:label path="adresse.rue">rue:</form:label>
 				<form:input path="adresse.rue" cssClass="form-control"/>
+				<form:errors path="adresse.rue" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
 				<form:label path="adresse.codePostal">Code postal:</form:label>
 				<form:input path="adresse.codePostal" cssClass="form-control"/>
+				<form:errors path="adresse.codePostal" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
 				<form:label path="adresse.ville">ville:</form:label>
 				<form:input path="adresse.ville" cssClass="form-control"/>
+				<form:errors path="adresse.ville" cssClass="alert alert-danger" element="div"></form:errors>
 			</div>
 			
 			<div class="form-group">
