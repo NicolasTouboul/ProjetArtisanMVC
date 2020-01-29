@@ -10,8 +10,7 @@
 <title>Insert title here</title>
 <c:set var="ctx" value="${pageContext.servletContext.contextPath}"></c:set>
 <link rel="stylesheet" href="${ctx}/bootstrap/css/bootstrap.min.css">
-<script type="text/javascript"
-	src="${ctx}/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${ctx}/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 
