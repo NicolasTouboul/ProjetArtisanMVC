@@ -81,12 +81,12 @@ public class CompteController {
 		return "redirect:/compte/compteList";
 	}
 
-	@GetMapping("/saveArtisan")
+	@PostMapping("/saveArtisan")
 	public String saveArtisan(@ModelAttribute("compte") @Valid Artisan compte, BindingResult br, Model model) {
 		return save(compte, br, model);
 	}
 
-	@GetMapping("/saveClient")
+	@PostMapping("/saveClient")
 	public String saveClient(@ModelAttribute("compte") @Valid Client compte, BindingResult br, Model model) {
 		return save(compte, br, model);
 	}
