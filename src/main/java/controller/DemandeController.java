@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import model.Demande;
+import model.StatutDemande;
 import repository.DemandeRepository;
 
 @Controller
@@ -54,6 +56,7 @@ public class DemandeController {
 	private String goEdit(Demande d, Model model) {
 		
 		model.addAttribute("demande", d);
+		model.addAttribute("statuts", StatutDemande.values());
 
 		return "demande/addDemande";
 }
