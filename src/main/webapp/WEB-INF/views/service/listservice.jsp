@@ -17,21 +17,19 @@
 
 	<div class="container">
 		<h1>
-			<spring:message code="service.list.titre"></spring:message>
+			liste de service
 		</h1>
-		<a href="${ctx}/service/addservice" class="btn btn-link"><spring:message
-				code="service.list.ajout"></spring:message></a>
+		<a href="${ctx}/service/addservice" class="btn btn-link">ajout de service</a>
 		<table class="table">
 			<tr>
-				<th>Metier</th>
+				<th>Service</th>
 				<th></th>
 			</tr>
 			<c:forEach items="${services}" var="s">
 				<tr>
-					<td>${s.nom}</td>
-					<td><a href="${ctx}/service/delete?nom=${s.nomService}"
-						class="btn btn-warning"><spring:message
-								code="service.list.supprimer"></spring:message></a></td>
+					<td>${s.nomService}</td>
+					<td><a href="${ctx}/service/delete?idService=${s.idService}"
+						class="btn btn-warning">effacer</a></td>
 				</tr>
 			</c:forEach>
 		</table>
