@@ -16,26 +16,22 @@
 <body>
 
 	<div class="container">
-		<div>
-			<a href="?lang=fr" class="btn btn-link"><spring:message code="francais"></spring:message></a>
-			<a href="?lang=en"class="btn btn-link"><spring:message code="english"></spring:message></a>
-		</div>
 		<h1>
-			<spring:message code="salle.list.titre"></spring:message>
+			<spring:message code="service.list.titre"></spring:message>
 		</h1>
-		<a href="${ctx}/salle/addsalle" class="btn btn-link"><spring:message
-				code="salle.list.ajout"></spring:message></a>
+		<a href="${ctx}/service/addservice" class="btn btn-link"><spring:message
+				code="service.list.ajout"></spring:message></a>
 		<table class="table">
 			<tr>
-				<th><spring:message code="salle.nom"></spring:message></th>
+				<th>Metier</th>
 				<th></th>
 			</tr>
-			<c:forEach items="${salles}" var="s">
+			<c:forEach items="${services}" var="s">
 				<tr>
 					<td>${s.nom}</td>
-					<td><a href="${ctx}/salle/delete?nom=${s.nom}"
+					<td><a href="${ctx}/service/delete?nom=${s.nomService}"
 						class="btn btn-warning"><spring:message
-								code="salle.list.supprimer"></spring:message></a></td>
+								code="service.list.supprimer"></spring:message></a></td>
 				</tr>
 			</c:forEach>
 		</table>

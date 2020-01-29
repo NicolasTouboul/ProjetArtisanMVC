@@ -12,23 +12,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import model.Civilite;
-import model.Personne;
-import model.Salle;
-import repositories.SalleRepository;
+
+import model.Service;
+import repository.ServiceRepository;
 
 @Controller
-@RequestMapping("/salle")
+@RequestMapping("/service")
 public class ServiceController {
 
 	
 	
 	@Autowired
-	SalleRepository salleRepository;
+	ServiceRepository serviceRepository;
 	
-	@GetMapping("/listsalle")
+	@GetMapping("/listservice")
 	public ModelAndView list() {
-		return new ModelAndView("salle/listsalle", "salles", salleRepository.findAll());
+		return new ModelAndView("service/listservice", "services", serviceRepository.findAll());
 	}
 	
 //	@GetMapping("/listsalle")
@@ -49,20 +48,20 @@ public class ServiceController {
 //	}
 //	
 	@GetMapping("/delete")
-	public  ModelAndView delete(@RequestParam (name="nom") String nom) {
-		salleRepository.deleteById(nom);
+	public  ModelAndView delete(@RequestParam (name="idService") long idService) {
+		serviceRepository.deleteById(idService);
 		return new ModelAndView("redirect:/salle/listsalle");
 	}
 	
-	@GetMapping("/addsalle")
-	public ModelAndView addSalle() {
-		return new ModelAndView("salle/addsalle", "salle", new Salle());
+	@GetMapping("/addservice")
+	public ModelAndView addservice() {
+		return new ModelAndView("service/addservice", "service", new Service());
 		
 	}
-	@PostMapping("/savesalle")
-	public ModelAndView save(@ModelAttribute("salle") Salle salle){
-		salleRepository.save(salle);
-		return new ModelAndView("redirect:/salle/listsalle");
+	@GetMapping("/saveservice")
+	public ModelAndView save(@ModelAttribute("service") Service service){
+		serviceRepository.save(service);
+		return new ModelAndView("redirect:/service/listservice");
 	}
 	
 //	@GetMapping("/addsalle")
