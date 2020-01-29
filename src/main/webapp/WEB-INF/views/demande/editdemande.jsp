@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <form:label path="statut">Statut</form:label>
-                <form:select cssClass="form-control" path="statut" items="${statuts}" itemLabel="statut">
+                <form:select cssClass="form-control" path="statut" items="${statuts}">
                 	
                 </form:select>
             </div>
