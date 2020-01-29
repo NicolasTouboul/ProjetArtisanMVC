@@ -24,33 +24,23 @@
             </div>
             <div class="form-group">
                 <form:label path="message">Message</form:label>
-                <form:input cssClass="form-control" path="message" itemLabel="message">
-                	
-                </form:input>
+                <form:input cssClass="form-control" path="message" itemLabel="message"/>
             </div>
             <div class="form-group">
                 <form:label path="artisan">idArtisan</form:label>
-                <form:input cssClass="form-control" path="artisan" itemValue="artisan" itemLabel="artisan">
-                	
-                </form:input>
+                <form:input cssClass="form-control" path="artisan" itemValue="artisan" itemLabel="artisan"/>
             </div>
             <div class="form-group">
                 <form:label path="client">idClient</form:label>
-                <form:input cssClass="form-control" path="client" itemValue="client" itemLabel="client">
-                	
-                </form:input>
+                <form:input cssClass="form-control" path="client" itemValue="client" itemLabel="client"/>
             </div>
             <div class="form-group">
                 <form:label path="service">idService</form:label>
-                <form:input cssClass="form-control" path="service" itemValue="service" itemLabel="service">
-                	
-                </form:input>
+                <form:input cssClass="form-control" path="service" itemValue="service" itemLabel="service"/>
             </div>
             <div class="form-group">
                 <form:label path="metier">idMetier</form:label>
-                <form:input cssClass="form-control" path="metier" itemValue="metier" itemLabel="metier">
-                	
-                </form:input>
+                <form:input cssClass="form-control" path="metier" itemValue="metier" itemLabel="metier"/>
             </div>
             <div class="form-group">
                 <form:label path="statut">Statut</form:label>

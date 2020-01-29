@@ -40,7 +40,7 @@ public class DemandeController {
 }
 	@GetMapping("/addDemande")
 	public ModelAndView adddemande() {
-		return new ModelAndView("demande/addDemande", "demande", new Demande());
+		return new ModelAndView("demande/editdemande", "demande", new Demande());
 	}
 	
 	@GetMapping("/editdemande")
