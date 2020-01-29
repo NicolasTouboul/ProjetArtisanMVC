@@ -38,8 +38,8 @@
 					<td>${c.adresse.numero}&nbsp;${c.adresse.rue}</td>
 					<td>${c.adresse.codePostal}</td>
 					<td>${c.adresse.ville}</td>
-					<td><a href="${ctx}/compte/edit?id=${c.idCompte}" class="btn btn-info">editer</a></td>
-					<td><a href="${ctx}/compte/delete?id=${c.idCompte}" class="btn btn-danger">supprimer</a></td>
+					<td><a href="${ctx}/compte/compteEdit?idCompte=${c.idCompte}" class="btn btn-info">editer</a></td>
+					<td><a href="${ctx}/compte/delete?idCompte=${c.idCompte}" class="btn btn-danger">supprimer</a></td>
 				</tr>
 			</c:forEach>
 			</table>

@@ -16,7 +16,7 @@
 <div class="container">
 		<h1>edition service</h1>
 		<form:form  action="saveservice" method="get" modelAttribute="service">
-			<form:hidden path="version"></form:hidden>
+			
 			<div class="form-group">
 				<form:label path="nomService">nomService:</form:label>
 				<form:input path="nomService" cssClass="form-control" />

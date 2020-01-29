@@ -50,7 +50,7 @@ public class ServiceController {
 	@GetMapping("/delete")
 	public  ModelAndView delete(@RequestParam (name="idService") long idService) {
 		serviceRepository.deleteById(idService);
-		return new ModelAndView("redirect:/salle/listsalle");
+		return new ModelAndView("redirect:/service/listservice");
 	}
 	
 	@GetMapping("/addservice")

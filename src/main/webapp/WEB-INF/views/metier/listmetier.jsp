@@ -29,7 +29,7 @@
 				<tr>
 					<td>${m.idMetier}</td>
 					<td>${m.titreMetier}</td>
-					<td><a href="${ctx}/metier/delete?id=${m.idMetier}"
+					<td><a href="${ctx}/metier/delete?idMetier=${m.idMetier}"
 						class="btn btn-warning">supprimer</a></td>
 				</tr>
 			</c:forEach>
