@@ -71,9 +71,9 @@ public class CompteController {
 //METHODE SAVE
 
 	public String save(Compte compte, BindingResult br, Model model) {
-//		if(br.hasErrors()) {
-//			return "compte/compteEdit";
-//		}
+		if(br.hasErrors()) {
+			return "compte/compteEdit";
+		}
 //		if(compte.getDemande()!=null && compte.getDemande().getNom().isEmpty()) {
 //			compte.setDemande(null);
 //		}
