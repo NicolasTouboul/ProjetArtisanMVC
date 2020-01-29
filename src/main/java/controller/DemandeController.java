@@ -28,20 +28,6 @@ public class DemandeController {
 	public ModelAndView list() {
 		return new ModelAndView("demande/listdemande", "demandes", demandeRepository.findAll());
 	}
-	@GetMapping("/delete")
-	public ModelAndView delete(@RequestParam(name="idDemande")Long idDemande) {
-		demandeRepository.deleteById(idDemande);
-		return new ModelAndView("redirect:/demande/listdemande");
-	}
-	@PostMapping("/savedemande")
-	public ModelAndView save(@ModelAttribute("demande") Demande demande) {
-	demandeRepository.save(demande);
-	return new ModelAndView("redirect:/demande/listdemande");
-}
-	@GetMapping("/addDemande")
-	public ModelAndView adddemande() {
-		return new ModelAndView("demande/editdemande", "demande", new Demande());
-	}
 	
 	@GetMapping("/editdemande")
 	public String edit(@RequestParam(name="idDemande") Long idDemande, Model model) {
@@ -50,6 +36,7 @@ public class DemandeController {
 	if (opt.isPresent()) {
 		d=opt.get();
 	}
+	model.addAttribute("demande", d);
 	return goEdit(d, model);
 	}
 	
@@ -60,5 +47,26 @@ public class DemandeController {
 
 		return "demande/editdemande";
 }
+	@PostMapping("/savedemande")
+	public String saveDemande(@ModelAttribute Demande demande, Model model) {
+		return save(demande, model);
+	}
+	
+	public String save( Demande demande, Model model) {
+		demandeRepository.save(demande);
+		return "redirect:/demande/listdemande";
+	}
+	
+	@GetMapping("/addDemande")
+	public String addDemande(@ModelAttribute Demande demande, Model model) {
+		return goEdit(new Demande(), model);
+		
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam (name="idDemande") Long idDemande) {
+		demandeRepository.deleteById(idDemande);
+		return "redirect:/demande/listdemande";
+	}
 	}
 

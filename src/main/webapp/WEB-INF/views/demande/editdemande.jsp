@@ -16,8 +16,8 @@
 	<div class="container">
         <h1>edition demande</h1>
         
-        <form:form action="${savedemande}" method="post" modelAttribute="demande">
-        	<form:hidden path="version"/>
+        <form:form action="savedemande" method="post" modelAttribute="demande">
+        	<form:hidden path="version"></form:hidden>
             <div class="form-group">
                 <form:label path="idDemande">idDemande</form:label>
                 <form:input path="idDemande" cssClass="form-control" readOnly="true"/>
