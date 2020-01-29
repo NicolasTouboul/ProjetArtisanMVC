@@ -15,6 +15,9 @@
 	<body>
 		
 		<div class="container">
+			<div>
+				<a href="${ctx}/demande/addDemande" class="btn btn-link">Ajout demande</a>
+			</div>
 			<table class="table">
 			  <tr>
 			    <th>Id demande</th>
