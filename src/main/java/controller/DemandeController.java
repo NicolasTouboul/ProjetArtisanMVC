@@ -58,7 +58,7 @@ public class DemandeController {
 		model.addAttribute("demande", d);
 		model.addAttribute("statuts", StatutDemande.values());
 
-		return "demande/addDemande";
+		return "demande/editdemande";
 }
 	}
 
