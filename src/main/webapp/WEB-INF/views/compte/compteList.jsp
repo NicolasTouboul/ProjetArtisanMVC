@@ -20,7 +20,7 @@
 		</div>
 		<table class="table">
 			<tr>
-				<th>id_compte</th>
+				<th>idCompte</th>
 				<th>login</th>
 				<th>mot de passe</th>
 				<th>adresse</th>
@@ -31,15 +31,15 @@
 			</tr>
 			<c:forEach items="${compte}" var="c">
 				<tr>
-					<td>${c.id_compte}</td>
+					<td>${c.idCompte}</td>
 					<td>${c.login}</td>
 					<td>${c.mdp}</td>
 	
 					<td>${c.adresse.numero}&nbsp;${c.adresse.rue}</td>
 					<td>${c.adresse.codePostal}</td>
 					<td>${c.adresse.ville}</td>
-					<td><a href="${ctx}/compte/edit?id=${c.id_compte}" class="btn btn-info">editer</a></td>
-					<td><a href="${ctx}/compte/delete?id=${c.id_compte}" class="btn btn-danger">supprimer</a></td>
+					<td><a href="${ctx}/compte/edit?id=${c.idCompte}" class="btn btn-info">editer</a></td>
+					<td><a href="${ctx}/compte/delete?id=${c.idCompte}" class="btn btn-danger">supprimer</a></td>
 				</tr>
 			</c:forEach>
 			</table>

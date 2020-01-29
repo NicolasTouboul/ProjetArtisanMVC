@@ -27,8 +27,8 @@
 		<form:form action="${action}" method="get" modelAttribute="compte">
 		<form:hidden path="version"/>
 			<div class="form-group">
-				<form:label path="id_compte">id_compte:</form:label>
-				<form:input path="id_compte" cssClass="form-control" readonly="true" placeholder = "l'id est généré automatiquement"/>
+				<form:label path="idCompte">idCompte:</form:label>
+				<form:input path="idCompte" cssClass="form-control" readonly="true" placeholder = "l'id est généré automatiquement"/>
 			</div>
 			
 			<div class="form-group">
