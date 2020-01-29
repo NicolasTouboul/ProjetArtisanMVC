@@ -25,6 +25,8 @@
 			    <th>Metier</th>
 			    <th>Statut</th>
 			    <th>Date</th>
+			    <th></th>
+			    <th></th>
 			  </tr>
 			  <c:forEach items="${demandes}" var="d">
 				  <tr>
@@ -36,6 +38,8 @@
 				    <td>${d.metier}</td>
 				    <td>${d.statut}</td>
 				    <td>${d.date}</td>
+				    <td><a href="editdemande?id=${d.idDemande}" class="btn btn-info">Editer</a></td>
+					<td><a href="delete?id=${d.idDemande}" class="btn btn-info">Supprimer</a></td>
 				  </tr>	
 			  </c:forEach>
 			</table>
