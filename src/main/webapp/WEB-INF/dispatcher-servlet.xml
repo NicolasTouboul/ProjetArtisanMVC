@@ -15,11 +15,10 @@
 
 	<mvc:annotation-driven validator="validator"></mvc:annotation-driven>
 
-	<bean id="validator" class="
-		org.springframework.validation.beanvalidation.LocalValidatorFactoryBean "></bean>
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"></bean>
 
 	<context:component-scan
-		base-package="TpSpringMvc.controller"></context:component-scan>
+		base-package="controller"></context:component-scan>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

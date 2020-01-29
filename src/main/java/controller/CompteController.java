@@ -28,7 +28,7 @@ public class CompteController {
 
 //METHODE FINDALL	
 	
-	@GetMapping
+	@GetMapping("/compteList")
 	public String list(Model model) {
 		model.addAttribute("compte", compteRepository.findAll());
 		return "compte/compteList";
@@ -40,7 +40,7 @@ public class CompteController {
 	private String goEdit(Compte c, Model model) {
 
 		model.addAttribute("compte", c);
-		// model.addAttribute("salles", demandeRepository.findAll());
+		// model.addAttribute("demandes", demandeRepository.findAll());
 		return "compte/compteEdit";
 	}
 
@@ -78,7 +78,7 @@ public class CompteController {
 //			compte.setDemande(null);
 //		}
 		compteRepository.save(compte);
-		return "redirect:/personne/list";
+		return "redirect:/compte/compteList";
 	}
 
 	@PostMapping("/saveArtisan")
@@ -96,6 +96,6 @@ public class CompteController {
 	@GetMapping("/delete")
 	public String delete(@RequestParam(name = "id") long id) {
 		compteRepository.deleteById(id);
-		return "redirect:/personne/list";
+		return "redirect:/compte/compteList";
 	}
 }
