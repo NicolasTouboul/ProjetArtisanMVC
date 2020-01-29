@@ -41,8 +41,8 @@
 				    <td>${d.metier}</td>
 				    <td>${d.statut}</td>
 				    <td>${d.date}</td>
-				    <td><a href="${ctx }/demande/editdemande?id=${d.idDemande}" class="btn btn-info">Editer</a></td>
-					<td><a href="${ctx }/demande/delete?id=${d.idDemande}" class="btn btn-warning">Supprimer</a></td>
+				    <td><a href="${ctx }/demande/editdemande?idDemande=${d.idDemande}" class="btn btn-info">Editer</a></td>
+					<td><a href="${ctx }/demande/delete?idDemande=${d.idDemande}" class="btn btn-warning">Supprimer</a></td>
 				  </tr>	
 			  </c:forEach>
 			</table>

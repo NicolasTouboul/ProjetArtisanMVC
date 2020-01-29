@@ -28,20 +28,6 @@ public class DemandeController {
 	public ModelAndView list() {
 		return new ModelAndView("demande/listdemande", "demandes", demandeRepository.findAll());
 	}
-//	@GetMapping("/delete")
-//	public ModelAndView delete(@RequestParam(name="idDemande")Long idDemande) {
-//		demandeRepository.deleteById(idDemande);
-//		return new ModelAndView("redirect:/demande/listdemande");
-//	}
-//	@PostMapping("/savedemande")
-//	public ModelAndView savedemande(@ModelAttribute("demande") Demande demande) {
-//	demandeRepository.save(demande);
-//	return new ModelAndView("redirect:/demande/listdemande");
-//}
-//	@GetMapping("/addDemande")
-//	public ModelAndView adddemande() {
-//		return new ModelAndView("demande/editdemande", "demande", new Demande());
-//	}
 	
 	@GetMapping("/editdemande")
 	public String edit(@RequestParam(name="idDemande") Long idDemande, Model model) {
@@ -65,8 +51,6 @@ public class DemandeController {
 	public String saveDemande(@ModelAttribute Demande demande, Model model) {
 		return save(demande, model);
 	}
-	
-	
 	
 	public String save( Demande demande, Model model) {
 		demandeRepository.save(demande);
