@@ -24,7 +24,7 @@
 			</c:otherwise>
 		</c:choose>
 		
-		<form:form action="${action}" method="get" modelAttribute="compte">
+		<form:form action="${action}" method="post" modelAttribute="compte">
 		<form:hidden path="version"/>
 			<div class="form-group">
 				<form:label path="idCompte">idCompte:</form:label>
