@@ -24,7 +24,7 @@ public class DemandeController {
 	
 	@GetMapping("/listdemande")
 	public ModelAndView list() {
-		return new ModelAndView("demande/listdemande", "demandes", demandeRepository);
+		return new ModelAndView("demande/listdemande", "demandes", demandeRepository.findAll());
 	}
 	@GetMapping("/delete")
 	public ModelAndView delete(@RequestParam(name="idDemande")Long idDemande) {
