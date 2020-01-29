@@ -14,17 +14,17 @@
 </head>
 <body>
 <div class="container">
-		<h1>edition salle</h1>
-		<form:form  action="savesalle" method="post" modelAttribute="salle">
-		<form:hidden path="version"></form:hidden>
+		<h1>edition metier</h1>
+		<form:form  action="savemetier" method="post" modelAttribute="metier">
+		
 		
 		<div class="form-group">
-				<form:label path="nom">nom:</form:label>
-				<form:input path="nom" cssClass="form-control" />
+				<form:label path="titreMetier">metier:</form:label>
+				<form:input path="titreMetier" cssClass="form-control" />
 			</div>
 		<div class="form-group">
 				<button type="submit" class="btn btn-success">envoyer</button>
-				<a href="${ctx}/salle/listsalle" class="btn btn-warning">annuler</a>
+				<a href="${ctx}/metier/listmetier" class="btn btn-warning">annuler</a>
 			</div>
 		</form:form>
 		</div>
