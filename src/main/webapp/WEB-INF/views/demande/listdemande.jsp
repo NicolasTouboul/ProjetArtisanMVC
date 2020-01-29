@@ -26,7 +26,7 @@
 			    <th>Statut</th>
 			    <th>Date</th>
 			  </tr>
-			  <c:forEach items="${demandes}" var=d>
+			  <c:forEach items="${demandes}" var="d">
 				  <tr>
 				    <td>${d.idDemande}</td>
 				    <td>${d.message}</td>
