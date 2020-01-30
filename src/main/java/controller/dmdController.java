@@ -15,14 +15,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import model.Demande;
 import model.StatutDemande;
+import repository.ArtisanRepository;
+import repository.CompteRepository;
 import repository.DemandeRepository;
+import repository.MetierRepository;
+import repository.ServiceRepository;
 
 @Controller
 @RequestMapping("/demande")
 public class dmdController {
 	
 	@Autowired
-	private DemandeRepository demandeRepository;
+	DemandeRepository demandeRepository;
+	@Autowired
+	MetierRepository metierRepository;
+	@Autowired
+	ServiceRepository serviceRepository;
+	@Autowired
+	ArtisanRepository artisanRepository;
 	
 	@GetMapping("/list")
 	public String list(Model model) {
@@ -49,6 +59,9 @@ public class dmdController {
 	}
 	
 	public String goEdit(Demande d, Model model) {
+		model.addAttribute("artisan", artisanRepository.findAll());
+		model.addAttribute("metier", metierRepository.findAll());
+		model.addAttribute("service", serviceRepository.findAll());
 		model.addAttribute("demande", d);
 		model.addAttribute("statuts", StatutDemande.values());
 		return "demande/edit";

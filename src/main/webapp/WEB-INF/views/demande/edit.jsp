@@ -30,34 +30,31 @@
             </div>
             <div class="form-group">
                 <form:label path="message">Message</form:label>
-                <form:input cssClass="form-control" path="message" itemLabel="message"/>
+                <form:textarea type="text" rows="5" cssClass="form-control" path="message" itemLabel="message"/>
             </div>
             <div class="form-group">
-                <form:label path="artisan">idArtisan</form:label>
+                <form:label path="artisan">Artisan</form:label>
                 <form:input cssClass="form-control" path="artisan" itemValue="artisan" itemLabel="artisan"/>
             </div>
             <div class="form-group">
-                <form:label path="client">idClient</form:label>
-                <form:input cssClass="form-control" path="client" itemValue="client" itemLabel="client"/>
-            </div>
-            <div class="form-group">
-                <form:label path="service">idService</form:label>
-                <form:input cssClass="form-control" path="service" itemValue="service" itemLabel="service"/>
-            </div>
-            <div class="form-group">
-                <form:label path="metier">idMetier</form:label>
-                <form:input cssClass="form-control" path="metier" itemValue="metier" itemLabel="metier"/>
-            </div>
-            <div class="form-group">
-                <form:label path="statut">Statut</form:label>
-                <form:select cssClass="form-control" path="statut" items="${statuts}" itemLabel="statut">
-                	
+                <form:label path="metier">Metier</form:label>
+                <form:select cssClass="form-control" items="${metier}" path="metier" itemValue="metier" itemLabel="metier">
                 </form:select>
             </div>
             <div class="form-group">
-                <form:label path="date">Date</form:label>
-                <form:input type="date" path="date" cssClass="form-control"/>
+                <form:label path="service">Service</form:label>
+                <form:select cssClass="form-control" items="${service}" path="service" itemValue="service" itemLabel="service">
+                </form:select>
             </div>
+<!--             <div class="form-group"> -->
+<%--                 <form:label path="statut">Statut</form:label> --%>
+<%--                 <form:select cssClass="form-control" path="statut" items="${statuts}" itemLabel="statut"> --%>
+<%--                 </form:select> --%>
+<!--             </div> -->
+<!--             <div class="form-group"> -->
+<%--                 <form:label path="date">Date</form:label> --%>
+<%--                 <form:input type="date" path="date" cssClass="form-control"/> --%>
+<!--             </div> -->
             
             <div class="form-group">
                <button type="submit" class="btn btn-success">Editer</button>
