@@ -47,15 +47,15 @@ public class DemandeController {
 
 		return "demande/editdemande";
 }
-	@PostMapping("/savedemande")
-	public String saveDemande(@ModelAttribute Demande demande, Model model) {
-		return save(demande, model);
-	}
+//	@PostMapping("/savedemande")
+//	public String saveDemande(@ModelAttribute Demande demande, Model model) {
+//		return save(demande, model);
+//	}
 	
-	public String save( Demande demande, Model model) {
-		demandeRepository.save(demande);
-		return "redirect:/demande/listdemande";
-	}
+//	public String save( Demande demande, Model model) {
+//		demandeRepository.save(demande);
+//		return "redirect:/demande/listdemande";
+//	}
 	
 	@GetMapping("/addDemande")
 	public String addDemande(@ModelAttribute Demande demande, Model model) {
@@ -67,6 +67,12 @@ public class DemandeController {
 	public String delete(@RequestParam (name="idDemande") Long idDemande) {
 		demandeRepository.deleteById(idDemande);
 		return "redirect:/demande/listdemande";
+	}
+	
+	@PostMapping("/savedemande")
+	public ModelAndView save(@ModelAttribute("demande") Demande demande){
+		demandeRepository.save(demande);
+		return new ModelAndView("redirect:/demande/listdemande");
 	}
 	}
 

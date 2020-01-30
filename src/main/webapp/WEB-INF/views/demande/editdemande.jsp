@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <form:label path="artisan">idArtisan</form:label>
-                <form:input cssClass="form-control" path="artisan" itemValue="artisan" itemLabel="artisan"/>
+                <form:input cssClass="form-control" path="artisan" itemLabel="artisan" itemValue="artisan" />
             </div>
             <div class="form-group">
                 <form:label path="client">idClient</form:label>
